@@ -1,6 +1,6 @@
 ## Hi there 👋
 
-Nice to meet you! Im Silvio, but you all can call me Hydra.
+Nice to meet you! Im Silvio, also know as Hydra.
 
 Here are some ideas to get you started:
 
