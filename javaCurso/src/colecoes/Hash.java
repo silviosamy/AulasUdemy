@@ -1,0 +1,23 @@
+package colecoes;
+
+import java.util.HashSet;
+
+public class Hash {
+
+	public static void main(String[] args) {
+		
+		HashSet<Usuario> usuarios = new HashSet<Usuario>();
+		
+		usuarios.add(new Usuario("Pedro"));
+		usuarios.add(new Usuario("Ana"));
+		usuarios.add(new Usuario("Guilherme"));
+		
+		
+		boolean resultado = usuarios.contains(new Usuario("Guilherme"));
+		System.out.println(resultado); //Vai dar True, pois "Guilherme está cadastrado" e o HashCode está implementado da forma correta.
+		
+//		deve ter sempre o : public int hashCode() {
+//								return this.nome.length();}
+		
+	}
+}
