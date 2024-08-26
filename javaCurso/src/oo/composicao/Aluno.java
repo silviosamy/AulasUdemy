@@ -19,6 +19,6 @@ public class Aluno {
 //	puxar na classe CursoTeste o código : 
 //	System.out.println(aluno1.cursos.get(0).alunos); Do contrário não funciona
 	public String toString() { 
-		return nome; //Sempre que precisar transformar um objetoe em string, ele irá usar a função to String
+		return nome; //Sempre que precisar transformar um objeto e em string, ele irá usar a função to String
 	}
 }
