@@ -3,7 +3,7 @@ package ExerciciosSilvio;
 // calcule quantos salários mínimos esse
 // usuário ganha e imprima na tela o resultado. (Base para o Salário mínimo R$ 1.293,20).
 
-public class exercicioCinco {
+public class exercicio5 {
     public static void main(String[] args) {
 
         float mediaSalario = (float) (7000 / 1293.20);
