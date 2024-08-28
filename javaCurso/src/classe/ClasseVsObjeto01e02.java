@@ -21,7 +21,7 @@ public class ClasseVsObjeto01e02 {
 //	    String Nome
 //		double Preço
 //		double Desconto
-//		Construtor é o responsável que a partir de uma classe define novos objetos. (new Scanner).
+//		Construtor é o responsável que a partir de uma classe define novos objetos. (new Construtor).
 //		
 //		
 //		
