@@ -18,7 +18,7 @@ public class exercicio12 {
         double credito = valor - ((valor/100) * 10);
         double cartao2x = valor;
         double cartao3xMais = valor + ((valor/100) * 10);
-        System.out.printf("R$%.2f",cartao3xMais);;
+        System.out.printf("R$%.2f",dinheiro);;
 
 
 
