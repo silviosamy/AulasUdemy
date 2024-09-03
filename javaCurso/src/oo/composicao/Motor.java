@@ -1,4 +1,4 @@
-package orientacaoObjetos.composicao;
+package oo.composicao;
 
 public class Motor {
 	

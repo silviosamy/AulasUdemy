@@ -1,4 +1,4 @@
-package orientacaoObjetos.desafio;
+package oo.desafio;
 
 public class Produto {
 
