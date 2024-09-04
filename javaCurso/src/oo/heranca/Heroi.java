@@ -1,6 +1,9 @@
 package oo.heranca;
 
 public class Heroi extends Jogador {
+    Heroi(int x, int y) {
+        super(x, y);
+    }
 //    Heroi agora também é um Jogador, conforme a outra class no mesmo package.
 
     boolean atacar(Jogador oponente) {
