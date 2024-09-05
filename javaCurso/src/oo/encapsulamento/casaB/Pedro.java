@@ -10,7 +10,4 @@ public class Pedro extends Ana {
 //        formaDeFalar;
 //        todosSabem;
     }
-        System.out.println(formaDeFalar);
-        System.out.println(todosSabem);
-    }
 }

@@ -9,7 +9,7 @@ public class Paulo {
 //        facoDentroDeCasa;
 //        formaDeFalar;
 //        todosSabem;
-        System.out.println(esposa.segredo); //privado, somente a Class ao qual foi criada pode enxergar isso.
+//        System.out.println(esposa.segredo); //privado, somente a Class ao qual foi criada pode enxergar isso.
         System.out.println(esposa.facoDentroDeCasa);
         System.out.println(esposa.formaDeFalar);
         System.out.println(esposa.todosSabem);
