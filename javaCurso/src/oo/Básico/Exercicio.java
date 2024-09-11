@@ -7,7 +7,7 @@ public class Exercicio {
         float n2 = 5.3f;
         float n3 = 7.8f;
 
-        float mediaAluno = CalculoMedia( n1, n2, n3 );
+        float mediaAluno = CalculoMedia(n1, n2, n3);
         System.out.println("A média do aluno é: " + mediaAluno);
     }
 
