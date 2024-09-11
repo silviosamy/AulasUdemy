@@ -1,4 +1,4 @@
-package oo.Básico;
+package oo.Basico;
 
 public class BasicoOO {
 
