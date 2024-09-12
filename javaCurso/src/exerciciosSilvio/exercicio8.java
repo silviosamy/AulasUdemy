@@ -1,4 +1,4 @@
-package ExerciciosSilvio;
+package exerciciosSilvio;
 
 import java.util.Arrays;
 import java.util.Collections;

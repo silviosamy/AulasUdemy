@@ -1,4 +1,4 @@
-package ExerciciosSilvio;
+package exerciciosSilvio;
 
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
@@ -17,24 +17,27 @@ public class exercicio9 {
 /// Entre 35,0 e 39,9 | Obesidade grau II (severa)
 /// Maior ou igual a 40 | Obesidade grau III (mórbida)
 
-        NumberFormat formatter = new DecimalFormat("##.#");
-        double peso = 70;
-        double altura = 1.80;
-        double imc = peso / (altura * altura);
-        String valorIMC = formatter.format(imc);
+        float peso = 70.0f;
+        float altura = 1.80f;
+        double imc = calculoIMC(peso,altura);
 
         if (imc <= 18.5) {
-            System.out.println("O IMC é: " + valorIMC + ". Está abaixo do peso");
+            System.out.printf("O IMC é: %.2f. Está abaixo do peso", imc);
         } else if (imc >= 18.6 && imc < 24.9) {
-            System.out.printf("O IMC é: " + valorIMC + ". Está no peso ideal!");
+            System.out.printf("O IMC é: %.2f. Está no peso ideal!", imc);
         } else if (imc >= 25 && imc < 29.9) {
-            System.out.printf("O IMC é: " + valorIMC + ". Está levemente acima do peso");
+            System.out.printf("O IMC é: %.2f. Está levemente acima do peso", imc);
         } else if (imc >= 30 && imc < 34.9) {
-            System.out.printf("O IMC é: " + valorIMC + ". Está em Obesidade Grau I");
+            System.out.printf("O IMC é: %.2f. Está em Obesidade Grau I", imc);
         } else if (imc >= 35 && imc < 39.9) {
-            System.out.printf("O IMC é: " + valorIMC + ". Está em Obesidade Grau II");
+            System.out.printf("O IMC é: %.2f. Está em Obesidade Grau II", imc);
         } else if (imc >= 40) {
-            System.out.printf("O IMC é: " + valorIMC + ". Está em Obesidade Grau III");
+            System.out.printf("O IMC é: %.2f.Está em Obesidade Grau III", imc);
         }
+    }
+
+    public static float calculoIMC(float peso, float altura) {
+        float imc = (peso / (altura * altura));
+        return imc;
     }
 }

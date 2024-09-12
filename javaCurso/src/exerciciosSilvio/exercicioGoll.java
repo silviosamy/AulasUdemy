@@ -1,4 +1,4 @@
-package ExerciciosSilvio;
+package exerciciosSilvio;
 
 public class exercicioGoll {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package ExerciciosSilvio;
+package exerciciosSilvio;
 
 public class exercicio1 {
 //

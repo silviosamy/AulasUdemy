@@ -1,4 +1,4 @@
-package ExerciciosSilvio;
+package exerciciosSilvio;
 
 public class exercicio4 {
 //    Faça um algoritmo que receba um número inteiro

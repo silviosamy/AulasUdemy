@@ -1,4 +1,4 @@
-package ExerciciosSilvio.usandoFor;
+package exerciciosSilvio.usandoFor;
 
 public class estruturasDeRepeticao {
     public static void main(String[] args) {
