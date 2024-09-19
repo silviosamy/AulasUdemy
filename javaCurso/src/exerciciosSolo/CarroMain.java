@@ -12,8 +12,16 @@ public class CarroMain {
         carros.add(new Carro("Jeep", 2023));
         carros.add(new Carro("Mustang", 1969));
 
-        for (Carro lista : carros) {
-            System.out.println("Nome: " + lista.nome + ". Ano: " + lista.ano);
+        for (Carro c : carros) {
+            if (c.getNome().equals("Ferrari")) {
+                c.setNome("Ferrari excluída");
+            }
+            if (c.getAno() < 2010) {
+                c.setStatus(" Antigo");
+            } else
+                c.setStatus(" Novo");
+
         }
+        System.out.println(carros.toString());
     }
 }

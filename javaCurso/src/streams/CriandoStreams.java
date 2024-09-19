@@ -9,6 +9,7 @@ public class CriandoStreams {
     public static void main(String[] args) {
 
         Consumer<String> print = System.out::print;
+        Consumer<Integer> println = System.out::println;
 //        Usando o Consumer, o parâmetro é criado para dar um system.out::print;
 
         Stream<String> langs = Stream.of("Java ", "Lua ", "JS\n");
@@ -25,5 +26,7 @@ public class CriandoStreams {
         outrasLangs.stream().forEach(print);
         outrasLangs.parallelStream().forEach(print);
 
+//        Stream.generate(() -> "a").forEach(print);
+        Stream.iterate(0, n -> n + 1).forEach(println);
     }
 }
