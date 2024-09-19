@@ -13,14 +13,16 @@ public class CarroMain {
         carros.add(new Carro("Mustang", 1969));
 
         for (Carro c : carros) {
+
             if (c.getNome().equals("Ferrari")) {
                 c.setNome("Ferrari excluída");
             }
             if (c.getAno() < 2010) {
                 c.setStatus(" Antigo");
-            } else
+                System.out.println(carros.toString());
+            } else {
                 c.setStatus(" Novo");
-
+            }
         }
         System.out.println(carros.toString());
     }
