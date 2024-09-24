@@ -29,15 +29,6 @@ public class Pessoa {
         this.carro = carro;
     }
 
-    @Override
-    public String toString() {
-        return "Pessoa{" +
-                "nome='" + nome + '\'' +
-                ", idade=" + idade +
-                ", carro=" + carro +
-                '}';
-    }
-
     public void setCarro() {
         this.carro = carro;
     }
