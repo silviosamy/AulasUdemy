@@ -1,4 +1,4 @@
-package exerciciosSolo2;
+package exerciciosSolo1;
 
 import java.util.List;
 
@@ -6,7 +6,7 @@ public class Pessoa {
 
     private String nome;
     private int idade;
-    private List<Carro> carro;
+    private List<Carro> listaCarros;
 
     public Pessoa(String nome, int idade) {
         this.nome = nome;
@@ -21,23 +21,19 @@ public class Pessoa {
         this.nome = nome;
     }
 
-    public List<Carro> getCarro() {
-        return carro;
-    }
-
-    public void setCarro(List<Carro> carro) {
-        this.carro = carro;
-    }
-
-    public void setCarro() {
-        this.carro = carro;
-    }
-
     public int getIdade() {
         return idade;
     }
 
     public void setIdade(int idade) {
         this.idade = idade;
+    }
+
+    public List<Carro> getListaCarros() {
+        return listaCarros;
+    }
+
+    public void setListaCarros(List<Carro> listaCarros) {
+        this.listaCarros = listaCarros;
     }
 }
