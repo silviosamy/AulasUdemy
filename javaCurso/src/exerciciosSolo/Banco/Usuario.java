@@ -9,6 +9,7 @@ public class Usuario {
     private char sexo;
     private String nacionalidade;
     List<Banco> contasBanco;
+    List<CanalYt> youtubeCanais;
 
     public List<Banco> getContasBanco() {
         return contasBanco;
@@ -55,5 +56,13 @@ public class Usuario {
         this.idade = idade;
         this.sexo = sexo;
         this.nacionalidade = nacionalidade;
+    }
+
+    public List<CanalYt> getYoutubeCanais() {
+        return youtubeCanais;
+    }
+
+    public void setYoutubeCanais(List<CanalYt> youtubeCanais) {
+        this.youtubeCanais = youtubeCanais;
     }
 }

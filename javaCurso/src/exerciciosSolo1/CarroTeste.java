@@ -17,6 +17,7 @@ public class CarroTeste {
             listCarros.add(new Carro("Ferrari", 2012));
             listCarros.add(new Carro("Porsche", 2006));
 
+
             pessoa.setListaCarros(listCarros);
         }
         for (Pessoa pessoa : listaPessoas) {
