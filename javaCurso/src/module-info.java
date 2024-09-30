@@ -5,6 +5,6 @@
  * 
  */
 module javaCurso {
-    requires java.xml;
     requires kotlin.stdlib;
+    requires java.sql;
 }
