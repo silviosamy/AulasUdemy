@@ -10,7 +10,6 @@ public class PessoasMain {
         listPessoas.add(new Pessoa("Silvio"));
         listPessoas.add(new Pessoa("Henrique"));
         listPessoas.add(new Pessoa("Sandro"));
-        List<String> listPropostas = new ArrayList<>();
 
         for (Pessoa pessoa : listPessoas) {//aqui serve para percorrer a lista de pessoas
             // e adicionar prefeitos e vereadores nelas
@@ -24,6 +23,7 @@ public class PessoasMain {
                 listVereadores.add(new Vereador("Ciclano", "PCDoB"));
             }
             pessoa.setListVereadores(listVereadores);
+
             //Aqui adiciona os prefeitos
             List<Prefeito> listPrefeitos = new ArrayList<>();
 
@@ -35,11 +35,15 @@ public class PessoasMain {
             }
             pessoa.setListPrefeitos(listPrefeitos);
 
+
             for (Prefeito prefeito : listPrefeitos) {
+                List<String> listPropostas = new ArrayList<>();
                 if (prefeito.getNome().equals("Adriano")) {
-                    listPropostas.add(new String("Prometo água"));
+                    listPropostas.add("Prometo água");
                     listPropostas.add("Baixar impostos");
-                } else listPropostas.add(new String("Picanha e cerveja"));
+                } else {
+                    listPropostas.add(new String("Picanha e cerveja"));
+                }
                 prefeito.setListPropostas(listPropostas);
             }
         }
@@ -48,10 +52,11 @@ public class PessoasMain {
             for (Vereador vereador : pessoa.getListVereadores()) {
                 System.out.println("Indicações p/ vereador: " + vereador.getNome());
             }
-            for (Prefeito prefeito : pessoa.getListPrefeitos()) {
-                System.out.println("Indicações p/ Prefeito: " + prefeito.getNome());
-                System.out.println("Propostas: " + prefeito.getListPropostas());
-            }
+            for (Prefeito prefeito : pessoa.getListPrefeitos())
+                for (String proposta : prefeito.getListPropostas()) {
+                    System.out.println("Indicações p/ Prefeito: " + prefeito.getNome());
+                    System.out.println("Propostas: " + prefeito.getListPropostas());
+                }
         }
     }
 
