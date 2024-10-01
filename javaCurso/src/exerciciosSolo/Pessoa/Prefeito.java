@@ -6,7 +6,16 @@ public class Prefeito {
 
     private String nome;
     private String partido;
-    List<Prefeito> listPrefeitos;
+    private List<String> listPropostas;
+
+
+    public List<String> getListPropostas() {
+        return listPropostas;
+    }
+
+    public void setListPropostas(List<String> listPropostas) {
+        this.listPropostas = listPropostas;
+    }
 
     public String getPartido() {
         return partido;
@@ -22,14 +31,6 @@ public class Prefeito {
 
     public void setNome(String nome) {
         this.nome = nome;
-    }
-
-    public List<Prefeito> getListPrefeitos() {
-        return listPrefeitos;
-    }
-
-    public void setListPrefeitos(List<Prefeito> listPrefeitos) {
-        this.listPrefeitos = listPrefeitos;
     }
 
     public Prefeito(String nome, String partido) {

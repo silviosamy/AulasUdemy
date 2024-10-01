@@ -1,23 +1,16 @@
 package exerciciosSolo.Pessoa;
 
-import java.util.List;
-
 public class Vereador {
 
     private String nome;
     private String partido;
 
-    public Vereador(String nome, String partido) {
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
         this.nome = nome;
-        this.partido = partido;
-    }
-
-    public List<Vereador> getListVereadores() {
-        return listVereadores;
-    }
-
-    public void setListVereadores(List<Vereador> listVereadores) {
-        this.listVereadores = listVereadores;
     }
 
     public String getPartido() {
@@ -28,13 +21,8 @@ public class Vereador {
         this.partido = partido;
     }
 
-    public String getNome() {
-        return nome;
-    }
-
-    public void setNome(String nome) {
+    public Vereador(String nome, String partido) {
         this.nome = nome;
+        this.partido = partido;
     }
-
-    List<Vereador> listVereadores;
 }
