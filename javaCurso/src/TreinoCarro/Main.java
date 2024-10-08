@@ -26,9 +26,6 @@ public class Main {
         for (Pessoa pessoa : listPessoas) {
             System.out.println("Nome: " + pessoa.getNome());
             for (Carro carros : pessoa.getListCarros()) {
-                if (carros <= 2010) {
-                    System.out.println("Carros: " + carros.getNome() + " Ano: " + carros.getAno());
-                }
             }
         }
     }
