@@ -2,9 +2,8 @@ package TreinoCarro;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
 
-public class Main {
+public class TesteFinal {
     public static void main(String[] args) {
 
 
@@ -18,14 +17,23 @@ public class Main {
                 listCarros.add(new Carro("Lamborghini", 2012));
             } else {
                 listCarros.add(new Carro("Jeep", 2024));
-                listCarros.add(new Carro("Ferrari", 2016));
+                listCarros.add(new Carro("Ferrari", 1996));
                 listCarros.add(new Carro("Fusca", 1950));
             }
             pessoa.setListCarros(listCarros);
         }
+        TesteFinal asdf = new TesteFinal();
+
+        for (Pessoa pessoa : listPessoas) {
+            for (Carro carros : pessoa.getListCarros()) {
+                Carro carro = asdf.defineSeEhVelho(carros);
+            }
+        }
         for (Pessoa pessoa : listPessoas) {
             System.out.println("Nome: " + pessoa.getNome());
             for (Carro carros : pessoa.getListCarros()) {
+                System.out.println("Carros: " + carros.getNome() + " Ano: " + carros.getAno());
+                System.out.println(carros.isOld);
             }
         }
     }
