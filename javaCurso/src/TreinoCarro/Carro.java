@@ -5,6 +5,16 @@ public class Carro {
     private String nome;
     private int ano;
 
+    boolean isOld = false;
+
+    public boolean isOld() {
+        return isOld;
+    }
+
+    public void setOld(boolean old) {
+        isOld = old;
+    }
+
     public int getAno() {
         return ano;
     }
@@ -29,4 +39,5 @@ public class Carro {
     public Carro(String nome) {
         this.nome = nome;
     }
+
 }
