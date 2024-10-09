@@ -3,6 +3,7 @@ package streams;
 import java.util.Arrays;
 import java.util.List;
 import java.util.function.BiFunction;
+import java.util.function.BinaryOperator;
 import java.util.function.Function;
 import java.util.function.Predicate;
 
@@ -18,12 +19,16 @@ public class Reduce3 {
 
         Predicate<Aluno> aprovado = a -> a.nota >= 7;
         Function<Aluno, Double> apenasNota = a -> a.nota;
-        BiFunction<Media, Double, Media> calculaMedia = Media::adicionar;
-        
+        BiFunction<Media, Double, Media> calculaMedia = (media, nota) -> media.adicionar(nota);
+        BinaryOperator<Media> combinarMedia = (m1, m2) -> Media.combinar(m1, m2);
 
-        alunos.stream()
+
+        Media media = alunos.stream()
                 .filter(aprovado)
-                .map(apenasNota);
+                .map(apenasNota)
+                .reduce(new Media(), calculaMedia, combinarMedia);
+
+        System.out.println("A média da turma é: " + media.getValor());
 
     }
 
