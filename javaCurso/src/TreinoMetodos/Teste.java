@@ -14,9 +14,9 @@ public class Teste {
 
         for (Pessoa pessoa : listPessoas) {
             List<Carro> listaCarros = new ArrayList<>();
-            listaCarros.add(utilClass.novoCarro("Ferrari", 2024, false));
-            listaCarros.add(utilClass.novoCarro("Lamborghini", 2016, false));
-            listaCarros.add(utilClass.novoCarro("Fusca", 1950, false));
+            listaCarros.add(utilClass.novoCarro("Ferrari", 2024));
+            listaCarros.add(utilClass.novoCarro("Lamborghini", 2016));
+            listaCarros.add(utilClass.novoCarro("Fusca", 1950));
             pessoa.setListCarros(listaCarros);
         }
         for (

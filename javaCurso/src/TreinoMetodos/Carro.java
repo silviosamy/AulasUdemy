@@ -6,6 +6,9 @@ public class Carro {
     private int ano;
     private boolean ehVelho;
 
+    public Carro(String nome, int ano) {
+    }
+
     public boolean isehVelho() {
         return ehVelho;
     }
