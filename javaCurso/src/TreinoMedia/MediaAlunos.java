@@ -12,12 +12,13 @@ public class MediaAlunos {
         UtilClass utilClass = new UtilClass();
 
         for (Aluno aluno : listNotas) {
-            System.out.println(aluno.getNome());
             if (utilClass.getMediaNota() >= 7) {
                 aluno.setStatus("Aprovado");
             } else {
                 aluno.setStatus("Reprovado");
-            }
+            }listNotas.l
         }
+
+
     }
 }

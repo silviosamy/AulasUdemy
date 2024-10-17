@@ -1,5 +1,7 @@
 package TreinoMedia;
 
+import java.util.List;
+
 public class Aluno {
 
     private double n1;
@@ -8,6 +10,7 @@ public class Aluno {
     private double n4;
     private String nome;
     private String status;
+
 
     public String getStatus() {
         return status;
