@@ -6,11 +6,12 @@ import java.util.List;
 public class MediaAlunos {
     public static void main(String[] args) {
 
+        UtilClass utilClass = new UtilClass();
+
         List<Aluno> listAluno = new ArrayList<>();
         listAluno.add(new Aluno("Silvio", 4.5, 2.6, 1.9, 5.3, false, true));
         listAluno.add(new Aluno("Henrique", 7.0, 7.0, 6.0, 6.0, false, false));
         listAluno.add(new Aluno("Alberto", 5.0, 5.0, 5.0, 5.0, true, false));
-        UtilClass utilClass = new UtilClass();
 
         for (Aluno aluno : listAluno) {
             if (utilClass.isAprovado(aluno)) {

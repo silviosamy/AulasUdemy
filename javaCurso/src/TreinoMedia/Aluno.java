@@ -4,11 +4,11 @@ import java.util.List;
 
 public class Aluno {
 
+    private String nome;
     private double n1;
     private double n2;
     private double n3;
     private double n4;
-    private String nome;
     private String status;
     private boolean amigoDoProfessor;
     private boolean amigoDoDiretor;
