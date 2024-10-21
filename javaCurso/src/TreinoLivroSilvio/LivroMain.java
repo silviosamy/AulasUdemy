@@ -22,14 +22,27 @@ public class LivroMain {
         do {
             System.out.println("");
             System.out.println("Escolha uma Opção: ");
-            System.out.println("0-Sair");
-            System.out.println("1-Emprestar Livro");
-            System.out.println("2-Devolver Livro");
-            System.out.println("3-Verificar Disponibilidade");
+            System.out.println("1.Emprestar Livro");
+            System.out.println("2.Devolver Livro");
+            System.out.println("3.Verificar Disponibilidade");
+            System.out.println("4.Sair");
 
             option = input.nextInt();
 
-        } while (option != 3);
+            if (option == 1) {
 
+            }
+            if (option == 2) {
+                System.out.println("asdsad");
+            }
+            if (option == 3) {
+                utilClass.verificarDisponibilidade(listLivros);
+            }
+            if (option == 4) {
+                input.close();
+            }
+
+        }
+        while (option != 4);
     }
 }
