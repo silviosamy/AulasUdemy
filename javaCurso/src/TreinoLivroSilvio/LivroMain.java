@@ -7,6 +7,8 @@ import java.util.Scanner;
 public class LivroMain {
     public static void main(String[] args) {
 
+
+        UtilClass utilClass = new UtilClass();
         Scanner input = new Scanner(System.in);
 
         List<Livro> listLivros = new ArrayList<>();
@@ -16,7 +18,7 @@ public class LivroMain {
 
         int option;
 
-        //aqui pra baixo , por padrão, irá passar as opções para o usuário escolher.
+        //aqui pra baixo , por padrão, irá passar as opções para o usuário escolher, enquanto não der 0, ele não sai.
         do {
             System.out.println("");
             System.out.println("Escolha uma Opção: ");
@@ -28,5 +30,6 @@ public class LivroMain {
             option = input.nextInt();
 
         } while (option != 3);
+
     }
 }
