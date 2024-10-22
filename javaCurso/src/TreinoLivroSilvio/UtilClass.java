@@ -17,9 +17,11 @@ public class UtilClass {
             String nomeLivro = solicitaTexto();
             if (livro.getNome().equals(nomeLivro) && livro.isDisponivel()) {
                 System.out.println("O livro está disponível");
+                solicitaTexto();
                 return true;
             } else {
                 System.out.println("O livro não está disponível");
+                solicitaTexto();
                 return false;
             }
         }
@@ -33,8 +35,10 @@ public class UtilClass {
             if (livro.getNome().equals(nomeLivro) && livro.isDisponivel()) {
                 System.out.println("Livro emprestado!");
                 livro.setDisponivel(false);
+                solicitaTexto();
             } else {
                 System.out.println("Livro indisponível para empréstimo");
+                solicitaTexto();
             }
         }
     }
@@ -49,6 +53,7 @@ public class UtilClass {
             } else {
                 if (livro.getNome().equals(nomeLivro) && livro.isDisponivel()) {
                     System.out.println("O Livro já foi devolvido");
+
                 } else {
                     System.out.println("Livro não encontrado");
                 }

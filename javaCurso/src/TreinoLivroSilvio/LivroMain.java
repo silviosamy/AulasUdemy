@@ -40,11 +40,10 @@ public class LivroMain {
             }
             if (option == 4) {
                 System.out.println("Obrigado! Volte sempre");
-                input.close();
             }
 
         } while (option != 4);
-
         input.close();
+
     }
 }
