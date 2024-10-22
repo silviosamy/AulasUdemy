@@ -26,6 +26,32 @@ public class UtilClass {
         return false;
     }
 
+    public void emprestarLivro(List<Livro> listLivros) {
+        System.out.println("Qual Livro você quer emprestar?");
+        for (Livro livro : listLivros) {
+            String nomeLivro = solicitaTexto();
+            if (livro.getNome().equals(nomeLivro) && livro.isDisponivel()) {
+                System.out.println("Livro emprestado!");
+                livro.setDisponivel(false);
+            } else {
+                System.out.println("Livro indisponível para empréstimo");
+            }
+        }
+    }
+
+    public void devolverLivro(List<Livro> listLivros) {
+        System.out.println("Qual livro você quer devolver?");
+        for (Livro livro : listLivros) {
+            String nomeLivro = solicitaTexto();
+            if (livro.getNome().equals(nomeLivro) && !livro.isDisponivel()) {
+                System.out.println("Livro devolvido!");
+                livro.setDisponivel(true);
+            } else {
+
+            }
+        }
+    }
+
     private static String solicitaTexto() {
         return new Scanner(System.in).nextLine();
     }

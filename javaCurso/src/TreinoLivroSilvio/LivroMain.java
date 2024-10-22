@@ -18,7 +18,7 @@ public class LivroMain {
 
         int option;
 
-        //aqui pra baixo , por padrão, irá passar as opções para o usuário escolher, enquanto não der 0, ele não sai.
+        //aqui pra baixo , por padrão, irá passar as opções para o usuário escolher, enquanto não der 4, ele não sai.
         do {
             System.out.println("");
             System.out.println("Escolha uma Opção: ");
@@ -30,10 +30,10 @@ public class LivroMain {
             option = input.nextInt();
 
             if (option == 1) {
-
+                utilClass.emprestarLivro(listLivros);
             }
             if (option == 2) {
-                System.out.println("asdsad");
+                utilClass.devolverLivro(listLivros);
             }
             if (option == 3) {
                 utilClass.verificarDisponibilidade(listLivros);
@@ -42,7 +42,8 @@ public class LivroMain {
                 input.close();
             }
 
-        }
-        while (option != 4);
+        } while (option != 4);
+
+        input.close();
     }
 }
