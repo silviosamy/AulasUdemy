@@ -5,10 +5,10 @@ import java.util.Scanner;
 
 public class UtilClass {
 
-    // - Verificar Disponibilidade
-    // - Emprestar Livro
-    // - Devolver Livro
-    // - Opcoes livro
+    // - Verificar Disponibilidade ok
+    // - Emprestar Livro ok
+    // - Devolver Livro ok
+    // - Opcoes livro tá no main, ok
 
 
     public boolean verificarDisponibilidade(List<Livro> listLivros) {
@@ -47,7 +47,11 @@ public class UtilClass {
                 System.out.println("Livro devolvido!");
                 livro.setDisponivel(true);
             } else {
-
+                if (livro.getNome().equals(nomeLivro) && livro.isDisponivel()) {
+                    System.out.println("O Livro já foi devolvido");
+                } else {
+                    System.out.println("Livro não encontrado");
+                }
             }
         }
     }

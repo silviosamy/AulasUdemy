@@ -39,6 +39,7 @@ public class LivroMain {
                 utilClass.verificarDisponibilidade(listLivros);
             }
             if (option == 4) {
+                System.out.println("Obrigado! Volte sempre");
                 input.close();
             }
 
