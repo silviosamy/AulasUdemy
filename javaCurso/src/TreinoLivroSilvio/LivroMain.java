@@ -20,7 +20,7 @@ public class LivroMain {
 
         //aqui pra baixo , por padrão, irá passar as opções para o usuário escolher, enquanto não der 4, ele não sai.
         do {
-            System.out.println("");
+            System.out.println(" ");
             System.out.println("Escolha uma Opção: ");
             System.out.println("1.Emprestar Livro");
             System.out.println("2.Devolver Livro");

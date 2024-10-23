@@ -17,11 +17,9 @@ public class UtilClass {
             String nomeLivro = solicitaTexto();
             if (livro.getNome().equals(nomeLivro) && livro.isDisponivel()) {
                 System.out.println("O livro está disponível");
-                solicitaTexto();
                 return true;
             } else {
                 System.out.println("O livro não está disponível");
-                solicitaTexto();
                 return false;
             }
         }
@@ -30,23 +28,40 @@ public class UtilClass {
 
     public void emprestarLivro(List<Livro> listLivros) {
         System.out.println("Qual Livro você quer emprestar?");
-        for (Livro livro : listLivros) {
-            String nomeLivro = solicitaTexto();
-            if (livro.getNome().equals(nomeLivro) && livro.isDisponivel()) {
-                System.out.println("Livro emprestado!");
-                livro.setDisponivel(false);
-                solicitaTexto();
-            } else {
-                System.out.println("Livro indisponível para empréstimo");
-                solicitaTexto();
+        String nomeLivro = solicitaTexto();
+        if (verificaLivroExiste(nomeLivro, listLivros)) {
+            for (Livro livro : listLivros) {
+                if (livro.getNome().equals(nomeLivro)) {
+                    if (livro.isDisponivel()) {
+                        System.out.println("Livro emprestado!");
+                        livro.setDisponivel(false);
+                    } else {
+                        System.out.println("Livro já emprestado");
+                    }
+                }
             }
+        } else {
+            System.out.println("Livro não encontrado");
         }
     }
 
+    public boolean verificaLivroExiste(String nomeLivro, List<Livro> listLivros) { // metodoo pra
+        // verificar se o livro existe para não rodar várias vezes a ListaLivros
+        for (Livro livro : listLivros) {
+            if (livro.getNome().equals(nomeLivro)) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+        return false;
+    }
+
+
     public void devolverLivro(List<Livro> listLivros) {
         System.out.println("Qual livro você quer devolver?");
+        String nomeLivro = solicitaTexto();
         for (Livro livro : listLivros) {
-            String nomeLivro = solicitaTexto();
             if (livro.getNome().equals(nomeLivro) && !livro.isDisponivel()) {
                 System.out.println("Livro devolvido!");
                 livro.setDisponivel(true);
@@ -54,12 +69,11 @@ public class UtilClass {
                 if (livro.getNome().equals(nomeLivro) && livro.isDisponivel()) {
                     System.out.println("O Livro já foi devolvido");
 
-                } else {
-                    System.out.println("Livro não encontrado");
                 }
             }
         }
     }
+
 
     private static String solicitaTexto() {
         return new Scanner(System.in).nextLine();
