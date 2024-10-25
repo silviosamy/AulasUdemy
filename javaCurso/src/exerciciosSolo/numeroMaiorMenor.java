@@ -8,8 +8,16 @@ public class numeroMaiorMenor {
 
         List<Integer> lista = new ArrayList<>();
 
-        lista.add(24); lista.add(125); lista.add(612); lista.add(251); lista.add(42);lista.add(32);
-        lista.add(10);lista.add(57);lista.add(85);lista.add(99);
+        lista.add(24);
+        lista.add(125);
+        lista.add(612);
+        lista.add(251);
+        lista.add(42);
+        lista.add(32);
+        lista.add(10);
+        lista.add(57);
+        lista.add(85);
+        lista.add(99);
 
         int maior = lista.get(0);
         int menor = lista.get(0);
