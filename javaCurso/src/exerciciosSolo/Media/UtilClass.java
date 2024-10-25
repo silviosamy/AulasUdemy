@@ -25,7 +25,7 @@ public class UtilClass {
     }
 
     public int menorIdade(List<Pessoa> listPessoas) {
-        int menorValor = 0;
+        int menorValor = 999;
         for (Pessoa pessoa : listPessoas) {
             if (pessoa.getIdade() < menorValor) {
                 menorValor = pessoa.getIdade();
