@@ -15,11 +15,17 @@ public class Main {
 
         long fatorial = 1;
 
-        for (int i = 1; i <= numero; i++) {
-            fatorial *= i;
+        for (int n = 1; n <= numero; n++) {
+            fatorial = 1;
+
+            // Calcula o fatorial de n
+            for (int i = 1; i <= n; i++) {
+                fatorial *= i;
+            }
+
+            System.out.println("Número: " + n + " - Fatorial: " + fatorial);
         }
 
-        System.out.println("O fatorial de " + numero + " é: " + fatorial);
         scanner.close();
     }
 }
