@@ -22,7 +22,8 @@ public class Main {
         System.out.println();
         System.out.println("B) A pessoa mais velha do grupo tem " +
                 utilClass.maiorIdade(listPessoas) + " anos. E a mais nova tem " +
-                utilClass.menorIdade(listPessoas));
+                utilClass.menorIdade(listPessoas) + " anos.");
+        System.out.println("C) Quantidade de mulheres com salário até R$100,00 : " + utilClass.mostraMenos(listPessoas));
     }
 
 

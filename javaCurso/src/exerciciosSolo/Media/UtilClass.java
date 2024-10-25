@@ -1,5 +1,6 @@
 package exerciciosSolo.Media;
 
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -14,7 +15,7 @@ public class UtilClass {
         return somaSalario / listPessoas.size();
     }
 
-    public int maiorIdade(List<Pessoa> listPessoas) {
+    public int maiorIdade(List<Pessoa> listPessoas) { // métodoo para pegar a maior idade
         int maiorValor = 0;
         for (Pessoa pessoa : listPessoas) {
             if (pessoa.getIdade() > maiorValor) {
@@ -24,7 +25,7 @@ public class UtilClass {
         return maiorValor;
     }
 
-    public int menorIdade(List<Pessoa> listPessoas) {
+    public int menorIdade(List<Pessoa> listPessoas) { //metodo para pega a menor idade
         int menorValor = 999;
         for (Pessoa pessoa : listPessoas) {
             if (pessoa.getIdade() < menorValor) {
@@ -32,5 +33,15 @@ public class UtilClass {
             }
         }
         return menorValor;
+    }
+
+    public int mostraMenos(List<Pessoa> listPessoas) {
+        int quantidade = 0;
+        for (Pessoa pessoa : listPessoas) {
+            if (pessoa.getSexo() == 'F' && pessoa.getSalario() < 100) {
+                quantidade++;
+            }
+        }
+        return quantidade;
     }
 }
