@@ -35,7 +35,7 @@ public class UtilClass {
         return menorValor;
     }
 
-    public int mostraMenos(List<Pessoa> listPessoas) {
+    public int mostraMenor(List<Pessoa> listPessoas) {
         int quantidade = 0;
         for (Pessoa pessoa : listPessoas) {
             if (pessoa.getSexo() == 'F' && pessoa.getSalario() < 100) {
