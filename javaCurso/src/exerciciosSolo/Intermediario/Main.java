@@ -57,7 +57,7 @@ public class Main {
                 total++;
             }
         }
-        porcentagem = (double) (total * 100) / listPessoas.size();
+        porcentagem = (total * 100) / listPessoas.size();
         return porcentagem;
     }
 
