@@ -12,9 +12,9 @@ public class Main {
         List<Funcionario> listFuncionarios2 = new ArrayList<>();
         List<Funcionario> listFuncionarios3 = new ArrayList<>();
 
-        Empresa empresa1 = new Empresa("Amanco");
-        Empresa empresa2 = new Empresa("BMW");
-        Empresa empresa3 = new Empresa("Tigre");
+        Empresa empresa1 = new Empresa("Amanco", "1111");
+        Empresa empresa2 = new Empresa("BMW", "2222");
+        Empresa empresa3 = new Empresa("Tigre", "3333");
 
 
         listFuncionarios1.add(new Funcionario("André"));
@@ -40,7 +40,25 @@ public class Main {
         System.out.println(empresa1.getNome() + " : " + main.qtdFuncionarios(empresa1) + " funcionários.");
         System.out.println(empresa2.getNome() + " : " + main.qtdFuncionarios(empresa2) + " funcionários.");
         System.out.println(empresa3.getNome() + " : " + main.qtdFuncionarios(empresa3) + " funcionários.");
+        System.out.println("Empresa com maior numero de Funcionários: " + main.maiorQtdFuncionarios(listEmpresas).toString());
 
+    }
+
+    public Empresa maiorQtdFuncionarios(List<Empresa> listEmpresas) {
+        int maior = 0;
+        String cnpjDaEmpresaMaior = "";
+        for (Empresa empresa : listEmpresas) {
+            if (empresa.getListFuncionarios().size() > maior) {
+                maior += empresa.getListFuncionarios().size();
+                cnpjDaEmpresaMaior = empresa.getCnpjEmpresa();
+            }
+        }
+        for (Empresa empresa : listEmpresas) {
+            if (empresa.getCnpjEmpresa().equals(cnpjDaEmpresaMaior)) {
+                return empresa;
+            }
+        }
+        return null;
     }
 
 

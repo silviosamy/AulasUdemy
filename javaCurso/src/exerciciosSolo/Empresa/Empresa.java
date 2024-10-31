@@ -1,9 +1,28 @@
 package exerciciosSolo.Empresa;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class Empresa {
+
+    String cnpjEmpresa;
+
+    @Override
+    public String toString() {
+        return nome;
+    }
+
+    public Empresa(String nome, String cnpjEmpresa) {
+        this.nome = nome;
+        this.cnpjEmpresa = cnpjEmpresa;
+    }
+
+    public String getCnpjEmpresa() {
+        return cnpjEmpresa;
+    }
+
+    public void setCnpjEmpresa(String cnpjEmpresa) {
+        this.cnpjEmpresa = cnpjEmpresa;
+    }
 
     private String nome;
     List<Funcionario> listFuncionarios;
