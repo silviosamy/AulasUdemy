@@ -12,9 +12,9 @@ public class Main {
         List<Funcionario> listFuncionarios2 = new ArrayList<>();
         List<Funcionario> listFuncionarios3 = new ArrayList<>();
 
-        Empresa empresa1 = new Empresa("Amanco", "1111");
-        Empresa empresa2 = new Empresa("BMW", "2222");
-        Empresa empresa3 = new Empresa("Tigre", "3333");
+        Empresa empresa1 = new Empresa("Amanco", "1111", 615.019);
+        Empresa empresa2 = new Empresa("BMW", "2222", 510.991);
+        Empresa empresa3 = new Empresa("Tigre", "3333", 900.000);
 
 
         listFuncionarios1.add(new Funcionario("André"));
@@ -49,7 +49,7 @@ public class Main {
         String cnpjDaEmpresaMaior = "";
         for (Empresa empresa : listEmpresas) {
             if (empresa.getListFuncionarios().size() > maior) {
-                maior += empresa.getListFuncionarios().size();
+                maior = empresa.getListFuncionarios().size();
                 cnpjDaEmpresaMaior = empresa.getCnpjEmpresa();
             }
         }

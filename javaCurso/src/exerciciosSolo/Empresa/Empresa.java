@@ -4,16 +4,26 @@ import java.util.List;
 
 public class Empresa {
 
-    String cnpjEmpresa;
+    private String cnpjEmpresa;
+    private double faturamento;
+
+    public Empresa(String nome, String cnpjEmpresa, double faturamento) {
+        this.nome = nome;
+        this.cnpjEmpresa = cnpjEmpresa;
+        this.faturamento = faturamento;
+    }
+
+    public double getFaturamento() {
+        return faturamento;
+    }
+
+    public void setFaturamento(double faturamento) {
+        this.faturamento = faturamento;
+    }
 
     @Override
     public String toString() {
         return nome;
-    }
-
-    public Empresa(String nome, String cnpjEmpresa) {
-        this.nome = nome;
-        this.cnpjEmpresa = cnpjEmpresa;
     }
 
     public String getCnpjEmpresa() {
