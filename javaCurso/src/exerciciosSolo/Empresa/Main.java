@@ -1,7 +1,12 @@
 package exerciciosSolo.Empresa;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
+
+import static java.util.Collections.list;
+import static java.util.Collections.sort;
 
 public class Main {
     public static void main(String[] args) {
@@ -12,9 +17,9 @@ public class Main {
         List<Funcionario> listFuncionarios2 = new ArrayList<>();
         List<Funcionario> listFuncionarios3 = new ArrayList<>();
 
-        Empresa empresa1 = new Empresa("Amanco", "1111", 615.019);
-        Empresa empresa2 = new Empresa("BMW", "2222", 510.991);
-        Empresa empresa3 = new Empresa("Tigre", "3333", 900.000);
+        Empresa empresa1 = new Empresa("Amanco", "1111", 8901.0);
+        Empresa empresa2 = new Empresa("BMW", "2222", 300.0);
+        Empresa empresa3 = new Empresa("Tigre", "3333", 9000.0);
 
 
         listFuncionarios1.add(new Funcionario("André"));
@@ -42,6 +47,18 @@ public class Main {
         System.out.println(empresa3.getNome() + " : " + main.qtdFuncionarios(empresa3) + " funcionários.");
         System.out.println("Empresa com maior numero de Funcionários: " + main.maiorQtdFuncionarios(listEmpresas).toString());
 
+
+        Collections.sort(listEmpresas, new Comparator<Empresa>() {
+            public int compare(Empresa e1, Empresa e2) {
+                return Double.compare(e2.getFaturamento(), e1.getFaturamento());
+            }
+        });
+
+        // Imprimir a lista ordenada
+        for (Empresa empresa : listEmpresas) {
+            System.out.println(empresa);
+        }
+
     }
 
     public Empresa maiorQtdFuncionarios(List<Empresa> listEmpresas) {
@@ -66,5 +83,11 @@ public class Main {
         return empresa.getListFuncionarios().size();
     }
 
-
+    //public Object faturamentoEmpresa(List<Empresa> listEmpresas) {
+    //  sort(listEmpresas, new Comparator<Empresa>() {
+    //      public int compare(Empresa e1, Empresa e2) {
+    //          return Double.compare(e2.getFaturamento(), e1.getFaturamento());
+    //      }
+    //  } return compare;
+    //}
 }

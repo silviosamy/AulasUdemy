@@ -21,7 +21,6 @@ public class Empresa {
         this.faturamento = faturamento;
     }
 
-    @Override
     public String toString() {
         return nome;
     }
