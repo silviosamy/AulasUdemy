@@ -46,18 +46,11 @@ public class Main {
         System.out.println(empresa2.getNome() + " : " + main.qtdFuncionarios(empresa2) + " funcionários.");
         System.out.println(empresa3.getNome() + " : " + main.qtdFuncionarios(empresa3) + " funcionários.");
         System.out.println("Empresa com maior numero de Funcionários: " + main.maiorQtdFuncionarios(listEmpresas).toString());
+        System.out.println("Empresas em ordem decrescente por faturamento: ");
 
-
-        Collections.sort(listEmpresas, new Comparator<Empresa>() {
-            public int compare(Empresa e1, Empresa e2) {
-                return Double.compare(e2.getFaturamento(), e1.getFaturamento());
-            }
-        });
-
-        // Imprimir a lista ordenada
-        for (Empresa empresa : listEmpresas) {
-            System.out.println(empresa);
-        }
+        listEmpresas.stream()
+                .sorted((e1, e2) -> Double.compare(e2.getFaturamento(), e1.getFaturamento()))
+                .forEach(System.out::println);
 
     }
 
