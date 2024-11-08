@@ -1,12 +1,7 @@
 package exerciciosSolo.Empresa;
 
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
 import java.util.List;
-
-import static java.util.Collections.list;
-import static java.util.Collections.sort;
 
 public class Main {
     public static void main(String[] args) {
@@ -51,7 +46,6 @@ public class Main {
         listEmpresas.stream()
                 .sorted((e1, e2) -> Double.compare(e2.getFaturamento(), e1.getFaturamento()))
                 .forEach(System.out::println);
-
     }
 
     public Empresa maiorQtdFuncionarios(List<Empresa> listEmpresas) {
