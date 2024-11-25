@@ -10,9 +10,9 @@ public class CaixaObjetoTeste {
         System.out.println(coisaA);
 
         CaixaObjeto caixaB = new CaixaObjeto();
-        caixaA.guardar("Olá!");
+        caixaB.guardar("Olá!");
 
-        String coisaB = (String) caixaA.abrir();
+        String coisaB = (String) caixaB.abrir();
         System.out.println(coisaB);
     }
 

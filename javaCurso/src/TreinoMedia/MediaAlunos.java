@@ -13,6 +13,7 @@ public class MediaAlunos {
         listAluno.add(new Aluno("Henrique", 7.0, 7.0, 6.0, 6.0, false, false));
         listAluno.add(new Aluno("Alberto", 5.0, 5.0, 5.0, 5.0, true, false));
 
+
         for (Aluno aluno : listAluno) {
             if (utilClass.isAprovado(aluno)) {
                 aluno.setStatus("Aprovado");

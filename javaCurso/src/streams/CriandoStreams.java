@@ -11,7 +11,6 @@ public class CriandoStreams {
 //        langs.forEach(print);
 ////        Criando streams, definindo os valores com Stream.of
 ////        Depois, é usando o parâmetro .forEach(print), para imprimir todos os valores definidos na stream.
-//        String[] maisLangs = {"Python ", "Lisp ", "Perl ", "Go\n"};
 ////    Stream a partir de Array :
 //        Stream.of(maisLangs).forEach(print); //usando Stream of
 //        Arrays.stream(maisLangs).forEach(print); //Arrays.Stream passando o array inteiro.
