@@ -1,14 +1,14 @@
 package generics;
 
+import java.util.LinkedHashSet;
 import java.util.Optional;
-import java.util.SortedSet;
-import java.util.TreeSet;
+import java.util.Set;
 
 public class Pares<C extends Number, V> {
 
-    private final SortedSet<Par<C, V>> itens = new TreeSet<>();
+    public final Set<Par<C, V>> itens = new LinkedHashSet<>();
 
-    private void adicionar(C chave, V valor) {
+    public void adicionar(C chave, V valor) {
         if (chave == null) return;
         Par<C, V> novoPar = new Par<C, V>(chave, valor);
 
@@ -27,6 +27,6 @@ public class Pares<C extends Number, V> {
                 .findFirst();
 
         return (parOptional.isPresent())
-                ? parOptional.get().getClass() : null;
+                ? parOptional.get().getValor() : null;
     }
 }
