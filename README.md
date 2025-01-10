@@ -2,7 +2,7 @@
 
 Nice to meet you! Im Silvio.
 
-Here are some ideas to get you started:
+About me:
 
 - 🌱 I’m currently learning Java on Udemy website throught a course. You can follow my progress on /AulasUdemy
 - 👯 I’m looking to collaborate only in my own projects for now. Still trying and studying to learn POO.
