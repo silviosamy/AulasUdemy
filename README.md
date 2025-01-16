@@ -1,11 +1,11 @@
 ## Hi there 👋
 
-Nice to meet you! Im Silvio, also know as Hydra.
+Nice to meet you! Im Silvio.
 
-Here are some ideas to get you started:
+About me:
 
 - 🌱 I’m currently learning Java on Udemy website throught a course. You can follow my progress on /AulasUdemy
-- 👯 I’m looking to collaborate only in my own projects for now. Still trying and studying to learn POO.
+- 👯 I’m looking to collaborate only in my own projects for now, currently learning Java(IntelliJ IDE) and mySQL.
 - 📫 You can reach me on Instagram @silviosamy
-- PS: If you have anything to help, I'd be happy to listen.
+- PS: If you have anything that helps me, I'd be happy to listen.
 
