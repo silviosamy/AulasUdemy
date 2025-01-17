@@ -5,10 +5,12 @@ public class DAOTeste {
 
         DAO dao = new DAO();
 
-        String sql = "INSERT INTO pessoas (nome) VALUES(?)";
+        String sql = "INSERT INTO pessoas (nome, codigo) VALUES(?, ?)";
 
-        dao.incluir(null, "João da Silva");
-        dao.incluir(null, "Ana Júlia");
-        dao.incluir(null, "Djalma Pereira");
+        System.out.println(dao.incluir(sql, "João da Silva", 1000));
+        System.out.println(dao.incluir(sql, "Ana Júlia", 1001));
+        System.out.println(dao.incluir(sql, "Djalma Pereira", 1002));
+
+        dao.close();
     }
 }
