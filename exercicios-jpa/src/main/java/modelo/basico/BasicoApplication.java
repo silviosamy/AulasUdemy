@@ -1,6 +1,7 @@
 package modelo.basico;
 
 import jakarta.persistence.EntityManager;
+import jakarta.persistence.NoResultException;
 import jakarta.persistence.PersistenceContext;
 import jakarta.persistence.Query;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,8 +30,8 @@ public class BasicoApplication {
         return (args) -> {
             transactionTemplate.execute(action -> {
                 try {
-                    //novoUsuario();
-                    alterarUsuario(1L, "Djalminha", "djamilnha@lanche.com");
+                    novoUsuario();
+                    // alterarUsuario(1L, "Djalminha", "djamilnha@lanche.com");
                     return null;
                 } catch (Exception e) {
                     action.setRollbackOnly();
@@ -50,9 +51,18 @@ public class BasicoApplication {
         Query query = entityManager.createQuery("FROM Usuario WHERE id = :id",
                 Usuario.class);
         query.setParameter("id", id);
-        Usuario usuario = (Usuario) query.getSingleResult();
-        usuario.setNome(nome);
-        usuario.setEmail(email);
-        entityManager.merge(usuario);
+        Usuario usuario;
+        try {
+            usuario = (Usuario) query.getSingleResult();
+
+        } catch (NoResultException e) {
+            usuario = null;
+        }
+        if (usuario != null) {
+            usuario.setNome(nome);
+            usuario.setEmail(email);
+            entityManager.merge(usuario);
+        }
     }
+
 }
