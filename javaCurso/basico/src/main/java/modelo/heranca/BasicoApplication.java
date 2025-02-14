@@ -28,8 +28,8 @@ public class BasicoApplication {
         return (args) -> {
             transactionTemplate.execute(action -> {
                 try {
-                    //novoUsuario();
-                    alterarUsuario(1L, "Djalminha", "djamilnha@lanche.com");
+                    novoAluno();
+                    novoAlunoBolsista();
                     return null;
                 } catch (Exception e) {
                     action.setRollbackOnly();
@@ -38,4 +38,17 @@ public class BasicoApplication {
             });
         };
     }
+
+    public void novoAluno() {
+        Aluno aluno = new Aluno(123L, "André");
+        entityManager.merge(aluno);
+        System.out.println("Novo aluno: " + aluno.getNome());
+    }
+
+    public void novoAlunoBolsista() {
+        AlunoBolsista alunoBolsista = new AlunoBolsista(100L, "João", 1000);
+        entityManager.merge(alunoBolsista);
+        System.out.println("Novo aluno: " + alunoBolsista.getNome());
+    }
+
 }
